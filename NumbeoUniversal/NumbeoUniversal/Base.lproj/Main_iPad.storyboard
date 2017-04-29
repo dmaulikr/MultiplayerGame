@@ -1,0 +1,772 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="12F45" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="fB3-N5-c30"/>
+                        <viewControllerLayoutGuide type="bottom" id="1WD-rS-yUT"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="home-background.jpg" translatesAutoresizingMaskIntoConstraints="NO" id="rQn-TT-cuF">
+                                <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gat-dy-PYH">
+                                <rect key="frame" x="259" y="563" width="250" height="59"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" image="home-1-player.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="uuO-v3-y2e" kind="modal" id="BmT-ey-sjF"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nNk-wj-7JE">
+                                <rect key="frame" x="259" y="643" width="250" height="59"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" image="home-2-player.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="UYz-mc-iB2" kind="modal" id="dj0-LM-mOS"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tbE-A4-Ton">
+                                <rect key="frame" x="259" y="724" width="250" height="59"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" image="home-3-player.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="aR6-sg-FjC" kind="modal" id="Lyw-Ot-U8F"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SOd-i4-UxA">
+                                <rect key="frame" x="259" y="797" width="250" height="59"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" image="home-4-player.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="HWv-xr-23L" kind="modal" id="b75-99-tXM"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EFd-0k-9cY">
+                                <rect key="frame" x="259" y="871" width="250" height="59"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" image="home-help.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="helpCmd:" destination="BYZ-38-t0r" eventType="touchUpInside" id="d3b-KO-g38"/>
+                                </connections>
+                            </button>
+                            <adBannerView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.0" contentMode="bottom" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nXP-pS-xbt">
+                                <rect key="frame" x="-109" y="958" width="1024" height="66"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                            </adBannerView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1698" y="1244"/>
+        </scene>
+        <!--Solo View Controller-->
+        <scene sceneID="FxA-uj-0tS">
+            <objects>
+                <viewController id="uuO-v3-y2e" customClass="SoloViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ecZ-pa-TlY"/>
+                        <viewControllerLayoutGuide type="bottom" id="UPh-wZ-eSc"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Pk0-4i-2ry">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="07S-lm-FKV">
+                                <rect key="frame" x="127" y="844" width="118" height="118"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="game-number-1.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="number1Cmd:" destination="uuO-v3-y2e" eventType="touchUpInside" id="RIm-8g-ddt"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fd2-Eo-gGZ">
+                                <rect key="frame" x="344" y="844" width="118" height="118"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="game-number-2.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="number2Cmd:" destination="uuO-v3-y2e" eventType="touchUpInside" id="J44-zy-b87"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pCi-lf-apB">
+                                <rect key="frame" x="552" y="844" width="118" height="118"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="game-number-3.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="number3Cmd:" destination="uuO-v3-y2e" eventType="touchUpInside" id="NHq-7X-iMu"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nBK-lW-9T4">
+                                <rect key="frame" x="127" y="69" width="118" height="118"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="game-number-1-180.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="II0-XU-mKM">
+                                <rect key="frame" x="344" y="69" width="118" height="118"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="game-number-2-180.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fcx-1v-DVP">
+                                <rect key="frame" x="552" y="69" width="118" height="118"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="game-number-3-180.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="game-your-turn.png" translatesAutoresizingMaskIntoConstraints="NO" id="Whu-Gg-Uer">
+                                <rect key="frame" x="283" y="687" width="240" height="83"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="game-your-turn-180.png" translatesAutoresizingMaskIntoConstraints="NO" id="ZLD-KU-MXe">
+                                <rect key="frame" x="283" y="222" width="240" height="83"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ilN-P9-8i4">
+                                <rect key="frame" x="25" y="262" width="118" height="500"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="game-restart.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="restartCmd:" destination="uuO-v3-y2e" eventType="touchUpInside" id="lXy-kQ-8xE"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="L5z-p3-dyz">
+                                <rect key="frame" x="622" y="262" width="118" height="500"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="game-return-home.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="modal" id="Vw3-9g-H2z"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="game-middle.png" translatesAutoresizingMaskIntoConstraints="NO" id="JXi-Lf-IYm">
+                                <rect key="frame" x="353" y="466" width="100" height="100"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="21" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aoa-fk-Ial">
+                                <rect key="frame" x="372" y="483" width="62" height="65"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="55"/>
+                                <color key="textColor" red="0.97254908080000002" green="0.69803923369999998" blue="0.70980393890000004" alpha="1" colorSpace="deviceRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="btnNumber1" destination="07S-lm-FKV" id="jgH-h1-Wuu"/>
+                        <outlet property="btnNumber1180" destination="nBK-lW-9T4" id="HzE-g2-Zhm"/>
+                        <outlet property="btnNumber2" destination="fd2-Eo-gGZ" id="nE0-3i-5rG"/>
+                        <outlet property="btnNumber2180" destination="II0-XU-mKM" id="6gZ-9c-cB2"/>
+                        <outlet property="btnNumber3" destination="pCi-lf-apB" id="gOi-rM-t2l"/>
+                        <outlet property="btnNumber3180" destination="fcx-1v-DVP" id="8Av-8c-WKn"/>
+                        <outlet property="imgTotal" destination="JXi-Lf-IYm" id="N4e-Hm-vcR"/>
+                        <outlet property="imgYourTurn" destination="Whu-Gg-Uer" id="8KU-1b-ew4"/>
+                        <outlet property="imgYourTurn180" destination="ZLD-KU-MXe" id="Fk4-J5-TF1"/>
+                        <outlet property="numberTotal" destination="aoa-fk-Ial" id="m3O-aU-zbm"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="akn-fA-pUn" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-871" y="-267"/>
+        </scene>
+        <!--Two Players View Controller-->
+        <scene sceneID="FEC-EW-Aud">
+            <objects>
+                <viewController id="UYz-mc-iB2" customClass="TwoPlayersViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="e6h-BQ-ECX"/>
+                        <viewControllerLayoutGuide type="bottom" id="1Jk-ZY-77v"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="CUO-Og-vBR">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bXr-k4-49Y">
+                                <rect key="frame" x="129" y="840" width="118" height="118"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="game-number-1.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="number1Cmd:" destination="uuO-v3-y2e" eventType="touchUpInside" id="WjU-QG-hyY"/>
+                                    <action selector="number1Cmd:" destination="UYz-mc-iB2" eventType="touchUpInside" id="d1x-yz-jnh"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hzS-YR-UJt">
+                                <rect key="frame" x="346" y="840" width="118" height="118"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="game-number-2.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="number2Cmd:" destination="uuO-v3-y2e" eventType="touchUpInside" id="r3o-lB-htL"/>
+                                    <action selector="number2Cmd:" destination="UYz-mc-iB2" eventType="touchUpInside" id="xVn-me-KR0"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Max-9g-gxT">
+                                <rect key="frame" x="554" y="840" width="118" height="118"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="game-number-3.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="number3Cmd:" destination="uuO-v3-y2e" eventType="touchUpInside" id="NGU-Nd-kvI"/>
+                                    <action selector="number3Cmd:" destination="UYz-mc-iB2" eventType="touchUpInside" id="m7P-l2-hq5"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="V9e-d7-cM8">
+                                <rect key="frame" x="129" y="65" width="118" height="118"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="game-number-1-180.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="number1Cmd180:" destination="UYz-mc-iB2" eventType="touchUpInside" id="5mf-E7-785"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tRf-av-8yT">
+                                <rect key="frame" x="346" y="65" width="118" height="118"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="game-number-2-180.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="number2Cmd180:" destination="UYz-mc-iB2" eventType="touchUpInside" id="G4b-bk-Fjr"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yod-YT-7Dw">
+                                <rect key="frame" x="554" y="65" width="118" height="118"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="game-number-3-180.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="number3Cmd180:" destination="UYz-mc-iB2" eventType="touchUpInside" id="z1o-eJ-HLg"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="game-your-turn.png" translatesAutoresizingMaskIntoConstraints="NO" id="AEI-Cc-Smf">
+                                <rect key="frame" x="285" y="683" width="240" height="83"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="game-your-turn-180.png" translatesAutoresizingMaskIntoConstraints="NO" id="uBf-6M-THY">
+                                <rect key="frame" x="285" y="218" width="240" height="83"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rXY-hF-fT0">
+                                <rect key="frame" x="27" y="258" width="118" height="500"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="game-restart.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="restartCmd:" destination="UYz-mc-iB2" eventType="touchUpInside" id="3IT-r0-63I"/>
+                                    <action selector="restartCmd:" destination="uuO-v3-y2e" eventType="touchUpInside" id="PSs-fu-Dp9"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ttf-9b-R9X">
+                                <rect key="frame" x="624" y="258" width="118" height="500"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="game-return-home.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="modal" id="G8n-Qv-K5A"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="game-middle.png" translatesAutoresizingMaskIntoConstraints="NO" id="BHm-xS-RLd">
+                                <rect key="frame" x="355" y="462" width="100" height="100"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="21" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8eV-c4-rVE">
+                                <rect key="frame" x="374" y="479" width="62" height="65"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="55"/>
+                                <color key="textColor" red="0.97254908080000002" green="0.69803923369999998" blue="0.70980393890000004" alpha="1" colorSpace="deviceRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="btnNumber1" destination="bXr-k4-49Y" id="byN-gB-aZd"/>
+                        <outlet property="btnNumber1180" destination="V9e-d7-cM8" id="WOp-gy-pvD"/>
+                        <outlet property="btnNumber2" destination="hzS-YR-UJt" id="OFL-ao-xmp"/>
+                        <outlet property="btnNumber2180" destination="tRf-av-8yT" id="z7c-H3-6nE"/>
+                        <outlet property="btnNumber3" destination="Max-9g-gxT" id="XFv-Et-URV"/>
+                        <outlet property="btnNumber3180" destination="yod-YT-7Dw" id="Kal-P9-lCW"/>
+                        <outlet property="imgTotal" destination="BHm-xS-RLd" id="yW0-55-eFB"/>
+                        <outlet property="imgYourTurn" destination="AEI-Cc-Smf" id="Mz0-Xl-LJ6"/>
+                        <outlet property="imgYourTurn180" destination="uBf-6M-THY" id="3ie-6e-yPv"/>
+                        <outlet property="numberTotal" destination="8eV-c4-rVE" id="nj2-cU-HoZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Oxb-Zm-cn2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="285" y="594"/>
+        </scene>
+        <!--Four Players View Controller-->
+        <scene sceneID="iez-a2-xbK">
+            <objects>
+                <viewController id="HWv-xr-23L" customClass="FourPlayersViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="0bJ-1e-RQF"/>
+                        <viewControllerLayoutGuide type="bottom" id="8rT-0A-h8X"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="QlH-xj-JfB">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ndj-Dp-WRM">
+                                <rect key="frame" x="142" y="840" width="118" height="118"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="game-number-1.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="number1Cmd:" destination="HWv-xr-23L" eventType="touchUpInside" id="4MU-el-auB"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UAX-0h-8Yg">
+                                <rect key="frame" x="359" y="840" width="118" height="118"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="game-number-2.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="number2Cmd:" destination="HWv-xr-23L" eventType="touchUpInside" id="XDZ-Mv-aQL"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LRr-hG-3IS">
+                                <rect key="frame" x="567" y="840" width="118" height="118"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="game-number-3.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="number3Cmd:" destination="HWv-xr-23L" eventType="touchUpInside" id="W2w-1E-9pb"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8KH-cV-mm2">
+                                <rect key="frame" x="613" y="640" width="118" height="118"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="game-number-1-CCW.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="number1Cmd90CW:" destination="HWv-xr-23L" eventType="touchUpInside" id="eyG-BZ-IiR"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q4H-Mp-MBR">
+                                <rect key="frame" x="613" y="449" width="118" height="118"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="game-number-2-CCW.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="number2Cmd90CW:" destination="HWv-xr-23L" eventType="touchUpInside" id="6PO-dE-8LU"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7CA-lN-e9r">
+                                <rect key="frame" x="613" y="277" width="118" height="118"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="game-number-3-CCW.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="number3Cmd90CW:" destination="HWv-xr-23L" eventType="touchUpInside" id="zVn-Qn-yid"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YPx-qv-YND">
+                                <rect key="frame" x="142" y="65" width="118" height="118"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="game-number-1-180.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="number1Cmd180:" destination="HWv-xr-23L" eventType="touchUpInside" id="3JN-0P-EMi"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OlM-Gz-MMz">
+                                <rect key="frame" x="359" y="65" width="118" height="118"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="game-number-2-180.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="number2Cmd180:" destination="HWv-xr-23L" eventType="touchUpInside" id="6Yj-dF-LPB"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XDv-BD-miA">
+                                <rect key="frame" x="567" y="65" width="118" height="118"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="game-number-3-180.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="number3Cmd180:" destination="HWv-xr-23L" eventType="touchUpInside" id="XpL-ii-MXU"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="game-your-turn.png" translatesAutoresizingMaskIntoConstraints="NO" id="I5r-R1-8q9">
+                                <rect key="frame" x="298" y="683" width="240" height="83"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="game-your-turn-CCW.png" translatesAutoresizingMaskIntoConstraints="NO" id="aTX-c2-iwE">
+                                <rect key="frame" x="510" y="394" width="83" height="240"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hNK-GG-apw">
+                                <rect key="frame" x="20" y="640" width="118" height="118"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="game-number-3-CW.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="number3Cmd90CWW:" destination="HWv-xr-23L" eventType="touchUpInside" id="mzX-ev-NZ2"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bwr-I9-Se4">
+                                <rect key="frame" x="20" y="449" width="118" height="118"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="game-number-2-CW.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="number2Cmd90CWW:" destination="HWv-xr-23L" eventType="touchUpInside" id="ZHo-cd-BgA"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bkO-35-E3c">
+                                <rect key="frame" x="20" y="277" width="118" height="118"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="game-number-1-CW.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="number1Cmd90CWW:" destination="HWv-xr-23L" eventType="touchUpInside" id="XjH-4x-RtR"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="game-your-turn-CW.png" translatesAutoresizingMaskIntoConstraints="NO" id="ZJo-3t-wnc">
+                                <rect key="frame" x="146" y="392" width="83" height="240"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="game-your-turn-180.png" translatesAutoresizingMaskIntoConstraints="NO" id="OyI-dT-Kia">
+                                <rect key="frame" x="298" y="218" width="240" height="83"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j3o-Ze-Vvf">
+                                <rect key="frame" x="242" y="394" width="59" height="250"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="game-restart.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="restartCmd:" destination="UYz-mc-iB2" eventType="touchUpInside" id="HLt-fG-0sP"/>
+                                    <action selector="restartCmd:" destination="HWv-xr-23L" eventType="touchUpInside" id="ObI-2a-Kan"/>
+                                    <action selector="restartCmd:" destination="uuO-v3-y2e" eventType="touchUpInside" id="cMW-ki-eJ3"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Nhx-lg-gKh">
+                                <rect key="frame" x="305" y="394" width="59" height="250"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="game-return-home.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="modal" id="S2P-Qi-65Z"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="game-middle.png" translatesAutoresizingMaskIntoConstraints="NO" id="lea-AG-wca">
+                                <rect key="frame" x="368" y="462" width="100" height="100"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="21" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PvI-GS-onQ">
+                                <rect key="frame" x="387" y="479" width="62" height="65"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="55"/>
+                                <color key="textColor" red="0.97254908080000002" green="0.69803923369999998" blue="0.70980393890000004" alpha="1" colorSpace="deviceRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="btnNumber1" destination="Ndj-Dp-WRM" id="fuj-BF-R3U"/>
+                        <outlet property="btnNumber1180" destination="YPx-qv-YND" id="y54-ac-hzv"/>
+                        <outlet property="btnNumber190CW" destination="8KH-cV-mm2" id="HyQ-RU-cDg"/>
+                        <outlet property="btnNumber190CWW" destination="bkO-35-E3c" id="WIA-1G-MtM"/>
+                        <outlet property="btnNumber2" destination="UAX-0h-8Yg" id="CDZ-r8-JgR"/>
+                        <outlet property="btnNumber2180" destination="OlM-Gz-MMz" id="muu-wG-4cu"/>
+                        <outlet property="btnNumber290CW" destination="Q4H-Mp-MBR" id="2xk-UQ-Bsf"/>
+                        <outlet property="btnNumber290CWW" destination="bwr-I9-Se4" id="LBR-Ns-PFF"/>
+                        <outlet property="btnNumber3" destination="LRr-hG-3IS" id="fI4-Cl-AgE"/>
+                        <outlet property="btnNumber3180" destination="XDv-BD-miA" id="Vjr-K6-R26"/>
+                        <outlet property="btnNumber390CW" destination="7CA-lN-e9r" id="cvl-R9-nAP"/>
+                        <outlet property="btnNumber390CWW" destination="hNK-GG-apw" id="Dk0-z6-vbY"/>
+                        <outlet property="imgTotal" destination="lea-AG-wca" id="Ofz-hy-zvx"/>
+                        <outlet property="imgYourTurn" destination="I5r-R1-8q9" id="WhI-Ab-whN"/>
+                        <outlet property="imgYourTurn180" destination="OyI-dT-Kia" id="QeJ-1d-cWV"/>
+                        <outlet property="imgYourTurn190CW" destination="aTX-c2-iwE" id="Tx9-HM-UGw"/>
+                        <outlet property="imgYourTurn190CWW" destination="ZJo-3t-wnc" id="RrV-DM-LL8"/>
+                        <outlet property="numberTotal" destination="PvI-GS-onQ" id="csW-qt-ngc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="urR-cI-smO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-793" y="2950"/>
+        </scene>
+        <!--Three Players View Controller-->
+        <scene sceneID="zPI-dg-nan">
+            <objects>
+                <viewController id="aR6-sg-FjC" customClass="ThreePlayersViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="yit-vh-8zE"/>
+                        <viewControllerLayoutGuide type="bottom" id="IpV-AE-Uj2"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="85e-ym-ydb">
+                        <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kHe-yJ-P5h">
+                                <rect key="frame" x="129" y="840" width="118" height="118"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="game-number-1.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="number1Cmd:" destination="UYz-mc-iB2" eventType="touchUpInside" id="Drg-Tg-eqg"/>
+                                    <action selector="number1Cmd:" destination="uuO-v3-y2e" eventType="touchUpInside" id="kfT-hN-FcN"/>
+                                    <action selector="number1Cmd:" destination="aR6-sg-FjC" eventType="touchUpInside" id="q2R-yl-ajF"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J1A-BM-bnQ">
+                                <rect key="frame" x="346" y="840" width="118" height="118"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="game-number-2.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="number2Cmd:" destination="UYz-mc-iB2" eventType="touchUpInside" id="2J4-yO-UMW"/>
+                                    <action selector="number2Cmd:" destination="aR6-sg-FjC" eventType="touchUpInside" id="820-aW-UgT"/>
+                                    <action selector="number2Cmd:" destination="uuO-v3-y2e" eventType="touchUpInside" id="l36-Tq-SOu"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fdm-zw-TPm">
+                                <rect key="frame" x="554" y="840" width="118" height="118"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="game-number-3.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="number3Cmd:" destination="aR6-sg-FjC" eventType="touchUpInside" id="4oy-pk-Mua"/>
+                                    <action selector="number3Cmd:" destination="uuO-v3-y2e" eventType="touchUpInside" id="EWJ-1v-ZE8"/>
+                                    <action selector="number3Cmd:" destination="UYz-mc-iB2" eventType="touchUpInside" id="gRB-De-97z"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="56Y-0F-hhf">
+                                <rect key="frame" x="600" y="640" width="118" height="118"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="game-number-1-CCW.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="number1Cmd90CW:" destination="aR6-sg-FjC" eventType="touchUpInside" id="WUf-MM-S9y"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C28-XC-MC7">
+                                <rect key="frame" x="600" y="449" width="118" height="118"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="game-number-2-CCW.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="number2Cmd90CW:" destination="aR6-sg-FjC" eventType="touchUpInside" id="NqB-z6-Bme"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ps2-KQ-3ER">
+                                <rect key="frame" x="600" y="277" width="118" height="118"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="game-number-3-CCW.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="number3Cmd90CW:" destination="aR6-sg-FjC" eventType="touchUpInside" id="5cO-xb-aik"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0Og-gx-e9r">
+                                <rect key="frame" x="129" y="65" width="118" height="118"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="game-number-1-180.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="number1Cmd180:" destination="UYz-mc-iB2" eventType="touchUpInside" id="wbr-b0-Iv0"/>
+                                    <action selector="number1Cmd180:" destination="aR6-sg-FjC" eventType="touchUpInside" id="zMO-Xk-IgT"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="LGf-2j-nRa">
+                                <rect key="frame" x="346" y="65" width="118" height="118"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="game-number-2-180.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="number2Cmd180:" destination="UYz-mc-iB2" eventType="touchUpInside" id="6PD-j7-zyo"/>
+                                    <action selector="number2Cmd180:" destination="aR6-sg-FjC" eventType="touchUpInside" id="hf5-57-XUm"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O2v-5h-XK3">
+                                <rect key="frame" x="554" y="65" width="118" height="118"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="game-number-3-180.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="number3Cmd180:" destination="UYz-mc-iB2" eventType="touchUpInside" id="27x-z7-D1F"/>
+                                    <action selector="number3Cmd180:" destination="aR6-sg-FjC" eventType="touchUpInside" id="39y-mR-W9u"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="game-your-turn.png" translatesAutoresizingMaskIntoConstraints="NO" id="jMO-ZS-ZdP">
+                                <rect key="frame" x="285" y="683" width="240" height="83"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="game-your-turn-CCW.png" translatesAutoresizingMaskIntoConstraints="NO" id="kzf-co-bHl">
+                                <rect key="frame" x="497" y="394" width="83" height="240"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" alpha="0.0" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="game-your-turn-180.png" translatesAutoresizingMaskIntoConstraints="NO" id="vIH-WL-bSv">
+                                <rect key="frame" x="285" y="218" width="240" height="83"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j3a-Jk-ine">
+                                <rect key="frame" x="25" y="394" width="59" height="250"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="game-restart.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="restartCmd:" destination="uuO-v3-y2e" eventType="touchUpInside" id="5jj-Ot-E34"/>
+                                    <action selector="restartCmd:" destination="aR6-sg-FjC" eventType="touchUpInside" id="DQc-xr-v1j"/>
+                                    <action selector="restartCmd:" destination="UYz-mc-iB2" eventType="touchUpInside" id="rmr-N9-ctD"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="U1U-hq-pZr">
+                                <rect key="frame" x="105" y="394" width="59" height="250"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="game-return-home.png">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="modal" id="5SA-jg-eaV"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="game-middle.png" translatesAutoresizingMaskIntoConstraints="NO" id="eIL-H5-A5F">
+                                <rect key="frame" x="355" y="462" width="100" height="100"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="21" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="atf-1d-3r5">
+                                <rect key="frame" x="374" y="479" width="62" height="65"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="55"/>
+                                <color key="textColor" red="0.97254908080000002" green="0.69803923369999998" blue="0.70980393890000004" alpha="1" colorSpace="deviceRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <connections>
+                        <outlet property="btnNumber1" destination="kHe-yJ-P5h" id="QXy-Jw-9We"/>
+                        <outlet property="btnNumber1180" destination="0Og-gx-e9r" id="Xks-pK-D63"/>
+                        <outlet property="btnNumber190CW" destination="56Y-0F-hhf" id="pEr-Z8-2Sm"/>
+                        <outlet property="btnNumber2" destination="J1A-BM-bnQ" id="dqK-ch-Xsw"/>
+                        <outlet property="btnNumber2180" destination="LGf-2j-nRa" id="Aft-kN-sox"/>
+                        <outlet property="btnNumber290CW" destination="C28-XC-MC7" id="TIT-js-TPe"/>
+                        <outlet property="btnNumber3" destination="fdm-zw-TPm" id="19k-C0-OMd"/>
+                        <outlet property="btnNumber3180" destination="O2v-5h-XK3" id="uus-zX-DK2"/>
+                        <outlet property="btnNumber390CW" destination="ps2-KQ-3ER" id="NHB-Sk-67Y"/>
+                        <outlet property="imgTotal" destination="eIL-H5-A5F" id="b4R-dn-9PT"/>
+                        <outlet property="imgYourTurn" destination="jMO-ZS-ZdP" id="N9Z-LI-DNM"/>
+                        <outlet property="imgYourTurn180" destination="vIH-WL-bSv" id="cQX-FZ-Yf1"/>
+                        <outlet property="imgYourTurn190CW" destination="kzf-co-bHl" id="GOj-NT-06G"/>
+                        <outlet property="numberTotal" destination="atf-1d-3r5" id="5gc-5y-ueL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sUc-PA-GK8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="369" y="1935"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="game-middle.png" width="300" height="300"/>
+        <image name="game-number-1-180.png" width="118" height="118"/>
+        <image name="game-number-1-CCW.png" width="118" height="118"/>
+        <image name="game-number-1-CW.png" width="118" height="118"/>
+        <image name="game-number-1.png" width="118" height="118"/>
+        <image name="game-number-2-180.png" width="118" height="118"/>
+        <image name="game-number-2-CCW.png" width="118" height="118"/>
+        <image name="game-number-2-CW.png" width="118" height="118"/>
+        <image name="game-number-2.png" width="118" height="118"/>
+        <image name="game-number-3-180.png" width="118" height="118"/>
+        <image name="game-number-3-CCW.png" width="118" height="118"/>
+        <image name="game-number-3-CW.png" width="118" height="118"/>
+        <image name="game-number-3.png" width="118" height="118"/>
+        <image name="game-restart.png" width="118" height="500"/>
+        <image name="game-return-home.png" width="118" height="500"/>
+        <image name="game-your-turn-180.png" width="500" height="118"/>
+        <image name="game-your-turn-CCW.png" width="118" height="500"/>
+        <image name="game-your-turn-CW.png" width="118" height="500"/>
+        <image name="game-your-turn.png" width="500" height="118"/>
+        <image name="home-1-player.png" width="500" height="118"/>
+        <image name="home-2-player.png" width="500" height="118"/>
+        <image name="home-3-player.png" width="500" height="118"/>
+        <image name="home-4-player.png" width="500" height="118"/>
+        <image name="home-background.jpg" width="1500" height="2589"/>
+        <image name="home-help.png" width="500" height="118"/>
+    </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar" statusBarStyle="blackOpaque"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination"/>
+    </simulatedMetricsContainer>
+    <inferredMetricsTieBreakers>
+        <segue reference="S2P-Qi-65Z"/>
+    </inferredMetricsTieBreakers>
+</document>
